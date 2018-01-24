@@ -2,7 +2,7 @@
   <div class="container-padding container">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <h1 class="top-heading">Binary Ascii Name</h1>
-      <h4 class="top-subheading">HTL Leonding - Open House Day 25.01 - 26.01</h4>
+      <h4 class="top-subheading">HTL Leonding - Open House 25.01 - 26.01</h4>
       <p class="credits"><i>by Felix Reichel 4bhitm</i></p>
     </div>
 
@@ -11,21 +11,21 @@
       <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
         <div class="centered">
           <div class="group">
-            <input type="text" id="name" required="required"/>
+            <input type="text" id="name" required="required" #nameEntryInput />
             <label for="name">Dein Name</label>
             <div class="bar"></div>
           </div>
         </div>
-      <div>
+      </div>
       <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3"></div>
       </div>
       
       <div class="row">
-        <button type="button" class="btn btn-outline-primary center-helper">BERECHNEN</button>
+        <button type="button" class="btn btn-outline-primary center-helper" (click)="onCalculateClicked()">BERECHNEN</button>
       </div>
     <div>
-      <br><br><br>
-     <h4>Letzte Berechnungen <span class="badge badge-secondary">140</span></h4>
+      <br><br><br><br><br>
+     <h4>Letzte Berechnungen <span class="badge badge-secondary">3</span></h4>
         <table class="table table-hover">
             <thead>
               <tr>
@@ -40,18 +40,18 @@
                 <th scope="row">1</th>
                 <td>Mark</td>
                 <td>Otto</td>
-                <td><button type="button" class="btn btn-outline-secondary">></button></td>
+                <td><button type="button" class="btn btn-outline-secondary">Zu den Details > </button></td>
               </tr>
               <tr>
                 <th scope="row">2</th>
                 <td>Jacob</td>
                 <td>Thornton</td>
-                <td><button type="button" class="btn btn-outline-secondary">></button></td>
+                <td><button type="button" class="btn btn-outline-secondary">Zu den Details > </button></td>
               </tr>
               <tr>
                 <th scope="row">3</th>
                 <td colspan="2">Larry the Bird</td>
-                <td><button type="button" class="btn btn-outline-secondary">></button></td>
+                <td><button type="button" class="btn btn-outline-secondary">Zu den Details > </button></td>
               </tr>
             </tbody>
           </table>

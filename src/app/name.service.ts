@@ -3,7 +3,8 @@ import { NameEntry } from './entities';
 
 @Injectable()
 export class NameService {
-  private static nameEntries: NameEntry[];
+  public static nameEntries: NameEntry[] = [];
+  private nameEntriesIdGenerator = 0;
   public imported: boolean;
   dataLoaded: EventEmitter<void> = new EventEmitter();
 
@@ -12,12 +13,16 @@ export class NameService {
 
   }
 
-  public addNameEntry(nameEntry: NameEntry) {
-    NameService.nameEntries.push(nameEntry);
+  public addNameEntry(nameEntry: NameEntry): number {
+    const nameEntryToAppend: NameEntry = nameEntry;
+    nameEntryToAppend.id = this.nameEntriesIdGenerator++;
+    NameService.nameEntries.push(nameEntryToAppend);
+    console.log(NameService.nameEntries);
+    return nameEntryToAppend.id;
   }
 
-  public findNameEntry(id: number) {
-    return NameService.nameEntries.find(nameEntry => nameEntry.id === id);
+  public findNameEntry(id: number): NameEntry {
+    return NameService.nameEntries.find(nE => nE.id === id);
   }
 
   public getAllNameEntries(): NameEntry[] {

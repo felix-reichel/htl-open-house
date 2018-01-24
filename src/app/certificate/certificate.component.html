@@ -1,3 +1,17 @@
-<p>
-  certificate works!
-</p>
+<div class="full-window">
+  <div class="container-padding container">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <button type="button" class="btn btn-outline-primary center-helper" [routerLink]="['home']">< Zurück zum Startbildschirm</button>
+            <div class="row">
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3"></div>
+            <div class="col-xs-12 col-sm-10 col-md-8 col-lg-6">
+              <img class="logo" src="http://www.htl-leonding.at/fileadmin/config/main/img/htlleondinglogo.png" alt="HTL Logo"><br><br><br>
+              <h1 class="top-heading">{{ this.currentName }}</h1>
+              <h2 class="top-subheading2">wird als Binärname umgewandelt in:</h2>
+              <h2><span *ngFor="let s of resultSet" class="badge badge-secondary">{{ s }}</span></h2>
+            </div>
+            <div class="col-xs-0 col-sm-1 col-md-2 col-lg-3"></div>
+          </div>
+      </div>
+  </div>
+</div>
